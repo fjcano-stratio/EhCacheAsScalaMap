@@ -61,6 +61,8 @@ val filteredResults=m.filter { case(key,value) => value.equals("fruit") }
 ## Building & running samples
 Use [SBT](http://www.scala-sbt.org) and run the unit tests
 
+USE sbt assembly => generate an uber jar => java -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5005 -jar target/scala-2.10/my-project-assembly-1.0.jar src/main/resources/ehcache1.xml
+
 
 ## TODO
 * Figure how to have a *BigMemory* profile within SBT along with the opensource ehcache to test and try BigMemory features
